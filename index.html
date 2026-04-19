@@ -56,7 +56,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .tex-horizon{height:60px;width:100%;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0 60 L0 45 Q 150 35 300 42 T 600 38 T 900 45 T 1200 40 L1200 60 Z' fill='%23C4A882' opacity='0.08'/%3E%3Cpath d='M0 60 L0 52 Q 200 46 450 50 T 800 48 T 1200 50 L1200 60 Z' fill='%239E8060' opacity='0.12'/%3E%3C/svg%3E");background-size:cover;background-repeat:no-repeat;position:relative;z-index:2;margin-top:-60px;pointer-events:none}
 
 /* NAV */
-nav{background:rgba(250,247,242,0.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:1.1rem 3.5rem;display:flex;align-items:center;justify-content:space-between;border-bottom:0.5px solid rgba(196,168,130,0.3);position:sticky;top:0;z-index:100;transition:background 0.3s}
+nav{background:rgba(250,247,242,0.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:1.1rem 3.5rem;display:flex;align-items:center;justify-content:flex-end;border-bottom:0.5px solid rgba(196,168,130,0.3);position:sticky;top:0;z-index:100;transition:background 0.3s}
 .nav-brand{display:none;font-family:var(--fd);font-size:1.05rem;font-weight:400;color:var(--charcoal);text-decoration:none;letter-spacing:0.02em;line-height:1}
 .nav-toggle{display:none}
 .mobile-lang-toggle{display:none}
@@ -277,7 +277,7 @@ footer::before{content:'';position:absolute;bottom:-60px;left:50%;transform:tran
   /* NAV — Mobile: brand left, hamburger right */
   nav{padding:0.9rem 1.25rem;background:rgba(250,247,242,0.95);justify-content:space-between}
   .nav-brand{display:block}
-  .nav-right{flex:0 0 auto;justify-content:flex-end;gap:0.25rem}
+  .nav-right{flex:0 0 auto;justify-content:flex-end;gap:0.6rem;align-items:center}
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;padding:1rem 1.25rem 1.5rem;gap:0;border-bottom:0.5px solid rgba(196,168,130,0.3);box-shadow:0 8px 24px rgba(44,44,42,0.08)}
   .nav-links.open{display:flex}
   .nav-links a{font-size:0.85rem;padding:0.85rem 0;letter-spacing:0.12em;border-bottom:0.5px solid rgba(196,168,130,0.15);text-align:center}
@@ -289,10 +289,11 @@ footer::before{content:'';position:absolute;bottom:-60px;left:50%;transform:tran
   .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .nav-toggle.open span:nth-child(2){opacity:0}
   .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  /* Hide inline lang toggle on mobile — it's inside the menu drawer at the bottom */
-  .lang-toggle{display:none}
-  .mobile-lang-toggle{display:flex;justify-content:center;gap:0.5rem;margin-top:1rem;padding-top:1rem;border-top:0.5px solid rgba(196,168,130,0.2)}
-  .mobile-lang-toggle .lang-btn{font-size:0.7rem;padding:0.4rem 0.9rem}
+  /* Keep the inline language toggle visible on mobile — sits to the left of the hamburger */
+  .lang-toggle{display:flex}
+  .lang-toggle .lang-btn{padding:0.3rem 0.55rem;font-size:0.62rem;min-width:auto}
+  /* Hide the in-drawer lang toggle — we want language visible immediately, not buried */
+  .mobile-lang-toggle{display:none}
 
   /* HERO — mobile: drop logo image, show typographic name like editorial */
   .hero{padding:3.5rem 1.25rem 3rem}
@@ -656,10 +657,10 @@ footer::before{content:'';position:absolute;bottom:-60px;left:50%;transform:tran
       <div class="price-sub" data-en="Individual sessions, online or in-person" data-es="Sesiones individuales, en línea o presenciales">Individual sessions, online or in-person</div>
     </div>
     <div class="price-card">
-      <div class="price-icon">💰</div>
+      <div class="price-icon">💬</div>
       <div class="price-label" data-en="Session Fee" data-es="Costo por Sesión">Session Fee</div>
-      <div class="price-val">$1,000 MXN</div>
-      <div class="price-sub" data-en="Private pay. May evolve as biofeedback is integrated." data-es="Pago privado. El precio puede ajustarse al integrar biofeedback.">Private pay. May evolve as biofeedback is integrated.</div>
+      <div class="price-val" style="font-size:1.1rem;margin-top:0.2rem" data-en="Schedule a consultation" data-es="Agenda una consulta">Schedule a consultation</div>
+      <div class="price-sub" data-en="Pricing is discussed privately during your complimentary introductory call." data-es="El costo se comenta en privado durante la llamada inicial gratuita.">Pricing is discussed privately during your complimentary introductory call.</div>
     </div>
     <div class="price-card">
       <div class="price-icon">🤝</div>
