@@ -789,6 +789,12 @@ footer::before{content:'';position:absolute;bottom:-60px;left:50%;transform:tran
 
 <!-- CONTRAST BREAK 2: Earth principle statement -->
 <div style="background:linear-gradient(135deg,var(--earth) 0%,var(--earth-dark) 100%);padding:6rem 2rem;text-align:center;position:relative;overflow:hidden">
+  <div class="cb2-particles" aria-hidden="true">
+    <span class="cb2p cb2p-1"></span><span class="cb2p cb2p-2"></span><span class="cb2p cb2p-3"></span>
+    <span class="cb2p cb2p-4"></span><span class="cb2p cb2p-5"></span><span class="cb2p cb2p-6"></span>
+    <span class="cb2p cb2p-7"></span><span class="cb2p cb2p-8"></span><span class="cb2p cb2p-9"></span>
+    <span class="cb2p cb2p-10"></span>
+  </div>
   <div style="position:absolute;inset:0;background:radial-gradient(circle at 30% 40%,rgba(250,247,242,0.1) 0%,transparent 50%);pointer-events:none"></div>
   <div style="position:relative;z-index:1;max-width:900px;margin:0 auto">
     <div style="font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--cream);opacity:0.7;margin-bottom:2rem" data-en="A principle" data-es="Un principio">A principle</div>
@@ -827,6 +833,9 @@ footer::before{content:'';position:absolute;bottom:-60px;left:50%;transform:tran
 <!-- CTA -->
 <section class="sec sec-alt light" id="contact" style="position:relative;overflow:hidden">
   <!-- Animated background orbs -->
+  <div class="cta-ring cta-ring-1"></div>
+  <div class="cta-ring cta-ring-2"></div>
+  <div class="cta-ring cta-ring-3"></div>
   <div class="cta-dot cta-dot-1"></div>
   <div class="cta-dot cta-dot-2"></div>
   <div class="cta-dot cta-dot-3"></div>
@@ -853,6 +862,11 @@ footer::before{content:'';position:absolute;bottom:-60px;left:50%;transform:tran
 .cta-dot-5{width:3px;height:3px;background:rgba(92,122,94,0.55);top:75%;left:55%;animation:ctaDot 13s 2s ease-in-out infinite}
 .cta-dot-6{width:2px;height:2px;background:rgba(196,168,130,0.5);top:15%;left:70%;animation:ctaDot 12s 4s ease-in-out infinite}
 @keyframes ctaDot{0%{opacity:0;transform:translateY(0)}15%{opacity:1}50%{opacity:0.5;transform:translateY(-16px)}85%{opacity:1}100%{opacity:0;transform:translateY(-32px)}}
+.cta-ring{position:absolute;top:50%;left:50%;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);animation:ctaBreathe 7s ease-in-out infinite}
+.cta-ring-1{width:700px;height:700px;border:1px solid rgba(92,122,94,0.1)}
+.cta-ring-2{width:500px;height:500px;border:1px solid rgba(92,122,94,0.08);animation-delay:-2s}
+.cta-ring-3{width:320px;height:320px;border:1px solid rgba(196,168,130,0.12);animation-delay:-4s}
+@keyframes ctaBreathe{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:0.8}50%{transform:translate(-50%,-50%) scale(1.06);opacity:0.4}}
 @keyframes ctaFloat1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(50px,40px) scale(1.15)}}
 @keyframes ctaFloat2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-40px,-35px) scale(1.12)}}
 @keyframes ctaFloat3{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-30px) scale(1.08)}}
@@ -1041,5 +1055,21 @@ function closeMenu(){
 })();
 </script>
 
+
+<style>
+.cb2-particles{position:absolute;inset:0;pointer-events:none;z-index:0}
+.cb2p{position:absolute;border-radius:50%;opacity:0}
+.cb2p-1{width:3px;height:3px;background:rgba(250,247,242,0.7);top:12%;left:8%;animation:cb2drift 10s 0s ease-in-out infinite}
+.cb2p-2{width:2px;height:2px;background:rgba(250,247,242,0.5);top:70%;left:15%;animation:cb2drift 13s 1s ease-in-out infinite}
+.cb2p-3{width:3px;height:3px;background:rgba(250,247,242,0.6);top:30%;left:78%;animation:cb2drift 9s 2s ease-in-out infinite}
+.cb2p-4{width:2px;height:2px;background:rgba(250,247,242,0.5);top:80%;left:65%;animation:cb2drift 11s 0.5s ease-in-out infinite}
+.cb2p-5{width:3px;height:3px;background:rgba(250,247,242,0.6);top:20%;left:45%;animation:cb2drift 12s 3s ease-in-out infinite}
+.cb2p-6{width:2px;height:2px;background:rgba(250,247,242,0.5);top:55%;left:88%;animation:cb2drift 8s 1.5s ease-in-out infinite}
+.cb2p-7{width:3px;height:3px;background:rgba(250,247,242,0.6);top:85%;left:38%;animation:cb2drift 14s 2.5s ease-in-out infinite}
+.cb2p-8{width:2px;height:2px;background:rgba(250,247,242,0.5);top:10%;left:62%;animation:cb2drift 10s 4s ease-in-out infinite}
+.cb2p-9{width:3px;height:3px;background:rgba(250,247,242,0.55);top:45%;left:22%;animation:cb2drift 11s 0.8s ease-in-out infinite}
+.cb2p-10{width:2px;height:2px;background:rgba(250,247,242,0.5);top:65%;left:52%;animation:cb2drift 9s 3.5s ease-in-out infinite}
+@keyframes cb2drift{0%{opacity:0;transform:translateY(0)}15%{opacity:1}50%{opacity:0.5;transform:translateY(-20px)}85%{opacity:1}100%{opacity:0;transform:translateY(-40px)}}
+</style>
 </body>
 </html>
